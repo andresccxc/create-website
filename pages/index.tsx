@@ -1,24 +1,27 @@
-import { useSelector } from 'react-redux';
+import React, { useContext } from 'react';
 import PageStructure from '../components/page-structure/PageStructure';
 import FinalPage from '../components/final-page/FinalPage';
-import dynamic from 'next/dynamic';
 import SectionOne from '../components/section-structure/section-one/SectionOne';
 import SectionTwo from '../components/section-structure/section-two/SectionTwo';
+import SectionThree from '../components/section-structure/section-three/SectionThree';
+import SectionFour from '../components/section-structure/section-four/SectionFour';
+import { PrincipalContext } from '../context/Context';
+
+const renderSection: any = {
+  'section-one': <SectionOne />,
+  'section-two': <SectionTwo />,
+  'section-three': <SectionThree />,
+  'section-four': <SectionFour />
+}
+
 
 const Home = () => {
-  const { currentSection: { name, path } } = useSelector((state: any) => state.structure);
-  const url = `../components/section-structure/${name}/${path}`;
-  const Section = dynamic(() => import(`../components/section-structure/${name}/${path}`));
-  const render:any = {
-    'section-one': <SectionOne />,
-    'section-two': <SectionTwo />
-  }
+  const { section } = useContext(PrincipalContext);
 
   return (
     <div className='p-20 border-black border-2 flex justify-around'>
       <PageStructure />
-      <Section /> 
-      {/* {render[name]} */}
+      {renderSection[section]}
       <FinalPage />
     </div>
   )

@@ -5,11 +5,14 @@ export const Container = styled.div`
   border:0.0625rem solid #ccc;
   padding:1.25rem 0;
   height:27.5rem;
-  >.section{
+  .section{
       height:6.25rem;
       border-top:0.0625rem solid #ccc;
        &:last-of-type{
         border-bottom:0.0625rem solid #ccc;
       } 
   }
+
+
+
 `;
