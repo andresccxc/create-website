@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import Head from 'next/head';
 import PageStructure from '../components/page-structure/PageStructure';
 import FinalPage from '../components/final-page/FinalPage';
 import SectionOne from '../components/section-structure/section-one/SectionOne';
@@ -19,7 +20,10 @@ const Home = () => {
   const { section } = useContext(PrincipalContext);
 
   return (
-    <div className='p-20 border-black border-2 flex justify-around'>
+    <div className='p-10 flex justify-around'>
+      <Head>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" crossOrigin="anonymous" />
+      </Head>
       <PageStructure />
       {renderSection[section]}
       <FinalPage />

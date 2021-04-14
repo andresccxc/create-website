@@ -14,22 +14,22 @@ const Structure = () => {
                 <div className={`section flex justify-center items-center ${getClassName('section-one')}`}
                     onClick={() => setSection('section-one')}
                 >
-                    Sección 1
+                    Header
                 </div>
                 <div className={`section flex justify-center items-center ${getClassName('section-two')}`}
                     onClick={() => setSection('section-two')}
                 >
-                    Sección 2
+                    Main
                 </div>
                 <div className={`section flex justify-center items-center ${getClassName('section-three')}`}
                     onClick={() => setSection('section-three')}
                 >
-                    Sección 3
+                    Banner
                 </div>
                 <div className={`section flex justify-center items-center ${getClassName('section-four')}`}
                     onClick={() => setSection('section-four')}
                 >
-                    Sección 4
+                    Footer
                 </div>
             </Container>
         </div>

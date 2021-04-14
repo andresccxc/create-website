@@ -10,7 +10,7 @@ const SectionFour = () => {
 
     return (
         <div className='flex flex-col items-center'>
-            <h2 className='font-bold text-2xl mb-5'>Estructura de la sección 4</h2>
+            <h2 className='font-bold text-2xl mb-5'>Estructura del Footer</h2>
             <Container>
                 <ShapeOne setComponent={()=>setSectionFour('one')}/>
                 <ShapeTwo setComponent={()=>setSectionFour('two')}/>
@@ -37,3 +37,4 @@ export const SectionFourComponent = () => {
         </>
     );
 };
+

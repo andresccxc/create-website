@@ -1,12 +1,19 @@
+import { ContainerShapeTwo } from '../Styles';
 
 const ShapeTwo = ({ setComponent }: any) => {
     return (
-        <div className="section-structure structure-two flex" onClick={setComponent}>
-            <img className='w-1/4 h-full product-image' src="https://cdn.shopify.com/s/files/1/0485/4566/1094/products/RedmiNote9T-6_6fefa032-9c80-468f-825f-14f69e77a2d0_900x.jpg?v=1613853936" alt="cellphone" />
-            <img className='w-1/4 h-full product-image' src="https://cdn.shopify.com/s/files/1/0485/4566/1094/products/SamsungGalaxyS21Ultra-7_900x.jpg?v=1611435524" alt="cellphone" />
-            <img className='w-1/4 h-full product-image' src="https://cdn.shopify.com/s/files/1/0485/4566/1094/products/iPhoneXR-3_900x.jpg?v=1612456921" alt="cellphone" />
-            <img className='w-1/4 h-full product-image' src="https://cdn.shopify.com/s/files/1/0485/4566/1094/products/Mi10-1_900x.jpg?v=1605797253" alt="cellphone" />
-        </div>
+        <ContainerShapeTwo className="rounded  py-3 px-2 flex items-center justify-between" onClick={setComponent}>
+            <i className="fas fa-mobile-alt shapetwo-logo relative"/>
+            <nav className='shapeone-nav flex items-center'>
+                <p className='shapeone-link'>Inicio</p>
+                <p className='shapeone-link'>Celulares</p>
+                <i className="fas fa-shopping-cart shapeone-link pt-1"/>
+                <div className='search-container relative'>
+                    <input className='searchbar rounded px-1' type="text" />
+                    <i className="fas fa-search forget absolute"/>
+                </div>
+            </nav>
+        </ContainerShapeTwo>
     );
 }
 

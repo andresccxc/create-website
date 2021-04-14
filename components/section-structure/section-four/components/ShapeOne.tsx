@@ -2,7 +2,7 @@ import {ContainerShapeOne} from '../Styles';
 
 const ShapeOne = ({ setComponent }: any) => {
     return (
-        <ContainerShapeOne className='footer-section text-white py-2 rounded my-2' onClick={setComponent}>
+        <ContainerShapeOne className='footer-section text-white py-2 rounded mb-4' onClick={setComponent}>
             <nav className='nav-footer flex w-full justify-center'>
                 <p className='mx-2'>Trabaja con nostros</p>
                 <p className='mx-2'>Término y condiciones</p>

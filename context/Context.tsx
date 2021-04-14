@@ -7,10 +7,16 @@ const PrincipalProvider = ({ children }) => {
 
     const [section, setSection] = useState<string>('section-one');
     const [sectionOne, setSectionOne] = useState('');
+    const [sectionTwo, setSectionTwo] = useState('');
+    const [sectionThree, setSectionThree] = useState('');
     const [sectionFour, setSectionFour] = useState('');
 
-    const data = { section, setSection, sectionOne, setSectionOne, sectionFour, setSectionFour };
-    
+    const data = {
+        section, setSection, sectionOne, setSectionOne,
+        sectionTwo, setSectionTwo, sectionThree, sectionFour,
+        setSectionThree, setSectionFour
+    };
+
     return (
         <PrincipalContext.Provider value={data}>
             {children}
