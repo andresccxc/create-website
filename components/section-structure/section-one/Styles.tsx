@@ -4,8 +4,8 @@ export const Container = styled.div`
   width:25rem;
 `;
 
-export const ContainerShapeOne = styled.div`
-      background-color:#000;
+export const ContainerShapeOne: any = styled.div`
+      background-color: ${(props: any) => props.bg ? props.bg : '#ccc'};
       cursor: pointer;
     .shapeone-logo{
       font-size:1.25rem;
@@ -24,8 +24,8 @@ export const ContainerShapeOne = styled.div`
     }
 `;
 
-export const ContainerShapeTwo= styled.div`
-      background-color:#fff159;
+export const ContainerShapeTwo:any = styled.div`
+      background-color: ${(props: any) => props.bg ? props.bg : '#ccc'};
       cursor: pointer;
       .shapetwo-logo{
       font-size:1.25rem;

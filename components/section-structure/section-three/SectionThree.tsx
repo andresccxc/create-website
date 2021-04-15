@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Container } from './Styles';
 import ShapeOne from './components/ShapeOne';
 import ShapeTwo from './components/ShapeTwo';
-import { PrincipalContext } from '../../../context/Context';
+import { PrincipalContext } from '../../../context/PrincipalContext';
 
 const SectionThree = () => {
 

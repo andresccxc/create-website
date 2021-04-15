@@ -1,4 +1,5 @@
-import PrincipalProvider from '../context/Context';
+import PrincipalProvider from '../context/PrincipalContext';
+import ModalProvider from '../context/ModalContext';
 import 'tailwindcss/tailwind.css';
 import '../styles/globals.css';
 
@@ -6,7 +7,9 @@ import '../styles/globals.css';
 function MyApp({ Component, pageProps }) {
   return (
     <PrincipalProvider>
-      <Component {...pageProps} />
+      <ModalProvider>
+        <Component {...pageProps} />
+      </ModalProvider>
     </PrincipalProvider>
   )
 };

@@ -1,12 +1,14 @@
 import React, { useContext } from 'react';
 import Head from 'next/head';
+import Modal from '../components/modal/Modal';
 import PageStructure from '../components/page-structure/PageStructure';
 import FinalPage from '../components/final-page/FinalPage';
 import SectionOne from '../components/section-structure/section-one/SectionOne';
 import SectionTwo from '../components/section-structure/section-two/SectionTwo';
 import SectionThree from '../components/section-structure/section-three/SectionThree';
 import SectionFour from '../components/section-structure/section-four/SectionFour';
-import { PrincipalContext } from '../context/Context';
+import { PrincipalContext } from '../context/PrincipalContext';
+import { ModalContext } from '../context/ModalContext';
 
 const renderSection: any = {
   'section-one': <SectionOne />,
@@ -18,6 +20,7 @@ const renderSection: any = {
 
 const Home = () => {
   const { section } = useContext(PrincipalContext);
+  const { showModal } = useContext(ModalContext);
 
   return (
     <div className='p-10 flex justify-around'>
@@ -27,6 +30,7 @@ const Home = () => {
       <PageStructure />
       {renderSection[section]}
       <FinalPage />
+      {showModal && (<Modal />)}
     </div>
   )
 }

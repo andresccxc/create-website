@@ -10,9 +10,7 @@ export const Container = styled.div`
     margin:0;
   }
  }
-  .structure-one{
-    height:200px;
-  }
+
   .structure-two{
     height:125px;
     padding:10px;
@@ -41,4 +39,12 @@ export const Container = styled.div`
     }
   }
 
+`;
+
+export const ShapeOneComponent = styled.div`
+    height:200px;
+    border:none;
+    margin-bottom:20px;
+    cursor: pointer;
+    position:relative;
 `;

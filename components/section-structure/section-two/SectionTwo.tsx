@@ -5,18 +5,18 @@ import ShapeThree from './components/ShapeThree';
 import ShapeFour from './components/ShapeFour';
 import ShapeFive from './components/ShapeFive';
 import ShapeSix from './components/ShapeSix';
-import { PrincipalContext } from '../../../context/Context';
+import { PrincipalContext } from '../../../context/PrincipalContext';
 import { Container } from './Styles';
 
 const SectionTwo = () => {
-    const { setSectionTwo } = useContext(PrincipalContext);
+    const { data: { section_two }, setSectionTwo } = useContext(PrincipalContext);
 
     return (
         <div className='flex flex-col items-center'>
             <h2 className='font-bold text-2xl mb-5'>Estructura del Main</h2>
             <Container>
-                <ShapeOne setComponent={() => setSectionTwo('one')} />
-                <ShapeTwo setComponent={() => setSectionTwo('two')} />
+                <ShapeOne setComponent={() => setSectionTwo('one')} data={section_two?.main_one} edit={true}/>
+                <ShapeTwo setComponent={() => setSectionTwo('two')} data={section_two.main_two} edit={true}/>
                 <ShapeThree setComponent={() => setSectionTwo('three')} />
                 <ShapeFour setComponent={() => setSectionTwo('four')} />
                 <ShapeFive setComponent={() => setSectionTwo('five')} />
@@ -31,11 +31,11 @@ export default SectionTwo;
 
 
 export const SectionTwoComponent = () => {
-    const { sectionTwo } = useContext(PrincipalContext);
+    const { sectionTwo, data: { section_two } } = useContext(PrincipalContext);
 
     const renderSection = {
-        'one': <ShapeOne />,
-        'two': <ShapeTwo />,
+        'one': <ShapeOne data={section_two?.main_one}/>,
+        'two': <ShapeTwo data={section_two?.main_two} />,
         'three': <ShapeThree />,
         'four': <ShapeFour />,
         'five': <ShapeFive />,

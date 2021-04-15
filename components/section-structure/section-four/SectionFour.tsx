@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { PrincipalContext } from '../../../context/Context';
+import { PrincipalContext } from '../../../context/PrincipalContext';
 import ShapeOne from './components/ShapeOne';
 import ShapeTwo from './components/ShapeTwo';
 import { Container } from './Styles';

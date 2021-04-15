@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { PrincipalContext } from '../../context/Context';
+import { PrincipalContext } from '../../context/PrincipalContext';
 import { Container } from './Styles';
 
 const Structure = () => {
