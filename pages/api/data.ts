@@ -1,5 +1,5 @@
-import { data } from '../../data';
+import { json } from '../../data';
 
 export default (req, res) => {
-  res.status(200).json(data)
+  res.status(200).json(json)
 }
