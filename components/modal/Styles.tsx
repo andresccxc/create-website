@@ -101,6 +101,51 @@ export const Container: any = styled.div`
         transform:scale(.8);
        }
     }
+
+    .selected-image-text{
+      height:320px;
+      top:0;
+      display:flex;
+      .left-arrow{
+         left:10px;
+         top:10px;
+         width:50px;
+        }
+      .finish-button{
+        background-color: red;
+        width:40px;
+        height:40px;
+        background:#075E54;
+        background:${(props: any) => props.bgSend2 ? props.bgSend2 : 'grey'};
+        bottom:20px;       
+        right:25px;
+        box-shadow: -1px 1px 6px -1px rgba(0,0,0,0.75);
+        transition:.4s all;
+          .fa-paper-plane{
+          font-size:14px;
+          padding-right:3px;
+        }
+      }
+      .image-text,.description{
+        width:50%;
+      }
+      .description{
+        border:1px solid #ccc;
+        padding:10px;
+        font-size:14px;
+        resize:none;
+        height:320px;
+        &:focus{
+          outline:none;
+      
+        }
+      }
+    }
+    .active-button{
+      &:active{
+        transform:scale(.8);
+       }
+    }
   
 
 `;

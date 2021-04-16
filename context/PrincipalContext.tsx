@@ -1,5 +1,5 @@
 import React, { useState, useEffect, createContext } from 'react';
-import axios from 'axios';
+import { json } from '../data';
 
 
 export const PrincipalContext = createContext(null);
@@ -14,12 +14,10 @@ const PrincipalProvider = ({ children }) => {
     const [data, setData] = useState({});
 
     useEffect(() => {
-        const getData = async () => {
-            const { data } = await axios('http://localhost:3000/api/data');
-            setData(data);
-        }
+        const getData = () => setData(json);
         getData();
     }, []);
+
 
     const value = {
         section, data, setSection, sectionOne, setSectionOne,

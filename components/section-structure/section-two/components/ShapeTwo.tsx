@@ -1,10 +1,11 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import EditIcon from '../../../EditIcon';
 import { ModalContext } from '../../../../context/ModalContext';
 
+
 const ShapeTwo = ({ setComponent, data, edit = false }: any) => {
+
     const { setShowModal, setImages, setAction, mainImages } = useContext(ModalContext);
-    const [images, setI] = useState(mainImages['main-two'] || data?.images.slice(0, 4));
 
     const openModal = () => {
         setShowModal(true);
@@ -12,12 +13,11 @@ const ShapeTwo = ({ setComponent, data, edit = false }: any) => {
         setImages(images);
         setAction('images')
     };
-    console.log('las actuales', mainImages)
 
     return (
         <div className="section-structure structure-two flex my-2 relative" onClick={setComponent}>
-            {images?.map((image: string, index: number) => (
-                <img key={`image-${index}`} className='w-1/4 h-full product-image' src={image} alt="cellphone" />
+            {mainImages['main-two']?.map((image: any, index: number) => (
+                <img key={`image-${index}`} className='w-1/4 h-full product-image' src={image?.image || image} alt="cellphone" />
             ))}
             {edit && (<EditIcon openModal={openModal} />)}
         </div>
